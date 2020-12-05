@@ -1,6 +1,6 @@
 import "./App.css"
 import Ticket from "./components/Ticket"
-import { Tabs, Tab, Accordion, Card } from "react-bootstrap"
+import { Tabs, Tab } from "react-bootstrap"
 import "../src/style/bootstrap.min.css" // Bootswatch - Darkly
 
 function App() {
