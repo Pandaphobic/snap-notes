@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import Ticket from "./components/Ticket"
+import { Tabs, Tab, Accordion, Card } from "react-bootstrap"
+import "../src/style/bootstrap.min.css" // Bootswatch - Darkly
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tabs defaultActiveKey="outages" id="uncontrolled-tab-example">
+        <Tab eventKey="outages" title="Outages">
+          this is something
+        </Tab>
+        <Tab eventKey="notes" title="Call Notes">
+          <Ticket />
+        </Tab>
+      </Tabs>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
