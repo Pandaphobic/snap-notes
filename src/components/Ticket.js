@@ -52,7 +52,7 @@ function Ticket() {
         </Col>
       </Row>
       <Row>
-        <Form.Label>Example textarea</Form.Label>
+        <Form.Label>Quick Notes</Form.Label>
         <Form.Control as="textarea" rows={3} />
       </Row>
       <Row>
