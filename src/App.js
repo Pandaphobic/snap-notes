@@ -6,12 +6,12 @@ import "../src/style/bootstrap.min.css" // Bootswatch - Darkly
 function App() {
   return (
     <div className="App">
-      <Tabs defaultActiveKey="outages" id="uncontrolled-tab-example">
-        <Tab eventKey="outages" title="Outages">
-          this is something
-        </Tab>
+      <Tabs defaultActiveKey="notes" id="uncontrolled-tab-example">
         <Tab eventKey="notes" title="Call Notes">
           <Ticket />
+        </Tab>
+        <Tab eventKey="outages" title="Outages">
+          this is something
         </Tab>
       </Tabs>
     </div>
