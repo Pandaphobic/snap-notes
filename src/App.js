@@ -3,6 +3,7 @@ import Ticket from "./components/Ticket"
 import { Tabs, Tab } from "react-bootstrap"
 import "../src/style/bootstrap.min.css" // Bootswatch - Darkly
 import Outages from "./components/Outages"
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -11,10 +12,11 @@ function App() {
         <Tab eventKey="notes" title="Call Notes">
           <Ticket />
         </Tab>
-        <Tab eventKey="outages" title="Outages">
+        <Tab eventKey="outages" title="Outages" disabled="true">
           <Outages />
         </Tab>
       </Tabs>
+      <Footer></Footer>
     </div>
   )
 }
