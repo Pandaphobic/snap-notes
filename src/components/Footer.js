@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import metadata from "../metadata.json"
 
 let footerStyle = {

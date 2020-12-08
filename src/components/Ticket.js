@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Row, Col, Form, Button, InputGroup, FormControl } from "react-bootstrap"
+import { Container, Row, Col, Form, Button, InputGroup } from "react-bootstrap"
 
 const fontWeight = {
   fontWeight: "600"
@@ -32,7 +32,7 @@ function Ticket() {
       let fixedName = fullname.map(name => {
         return name.trim()
       })
-      let outputName = fixedName.filter(name => name != "")
+      let outputName = fixedName.filter(name => name !== "")
       nameInput.value = `${outputName[1]}, ${outputName[0]}`
     }
   }
@@ -67,7 +67,7 @@ function Ticket() {
           <InputGroup className="mb-3">
             <InputGroup.Prepend>
               <Button onClick={handleFlip} variant="outline-secondary">
-                <i class="fas fa-sync-alt"></i>
+                <i className="fas fa-sync-alt"></i>
               </Button>
             </InputGroup.Prepend>
             <Form.Control id="fullname" style={fontWeight} type="text" placeholder="Lastname, Firstname" />
