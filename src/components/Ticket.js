@@ -17,15 +17,23 @@ function Ticket() {
     let nameInput = document.querySelector("#fullname")
     raw = nameInput.value
 
-    let re = /\,/
-
+    // Look for the separating Character and remove spaces
+    // Expected input is either Lastname, Firstname or Firstname Lastname
     if (raw.includes(",")) {
-      fullname = raw.split(", ")
-      console.log(fullname)
-      nameInput.value = `${fullname[1]} ${fullname[0]}`
+      fullname = raw.split(",")
+      // Remove spaces
+      let fixedName = fullname.map(name => {
+        return name.trim()
+      })
+      nameInput.value = `${fixedName[1]} ${fixedName[0]}`
     } else {
       fullname = raw.split(" ")
-      nameInput.value = `${fullname[1]}, ${fullname[0]}`
+      // Remove spaces
+      let fixedName = fullname.map(name => {
+        return name.trim()
+      })
+      let outputName = fixedName.filter(name => name != "")
+      nameInput.value = `${outputName[1]}, ${outputName[0]}`
     }
   }
   return (
