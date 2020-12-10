@@ -9,14 +9,14 @@ import Schedule from "./components/schedule/Schedule"
 function App() {
   return (
     <div className="App">
-      <Tabs defaultActiveKey="notes" id="uncontrolled-tabs">
+      <Tabs defaultActiveKey="schedule" id="uncontrolled-tabs">
         <Tab eventKey="notes" title="Call Notes">
           <Ticket />
         </Tab>
         <Tab eventKey="schedule" title="Schedule">
           <Schedule />
         </Tab>
-        <Tab eventKey="outages" title="Outages" disabled="true">
+        <Tab eventKey="outages" title="Outages">
           <Outages />
         </Tab>
       </Tabs>
