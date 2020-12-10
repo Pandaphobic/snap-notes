@@ -38,3 +38,14 @@
 .drop-schedule {
   background-color: #282c34;
 }
+
+body::-webkit-scrollbar {
+  width: 0.35rem;
+}
+body::-webkit-scrollbar-track {
+  background: #282c34;
+}
+body::-webkit-scrollbar-thumb {
+  background: #61dafb;
+  border-radius: 5px;
+}
