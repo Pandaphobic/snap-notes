@@ -4,7 +4,7 @@ import "../src/style/bootstrap.min.css" // Bootswatch - Darkly
 
 // Dependancies
 import { Navbar, Nav } from "react-bootstrap"
-import { Route, BrowserRouter as Router } from "react-router-dom"
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom"
 
 // Components
 import Outages from "./components/Outages"
@@ -24,10 +24,13 @@ function App() {
             <Nav.Link href="/outages">Outages</Nav.Link>
           </Nav>
         </Navbar>
+
         <Router className="m-auto">
-          <Route path="/notes" exact component={Notes} />
-          <Route path="/schedule" component={Schedule} />
-          <Route path="/outages" component={Outages} />
+          <Switch>
+            <Route path="/notes" component={Notes} />
+            <Route path="/schedule" component={Schedule} />
+            <Route path="/outages" component={Outages} />
+          </Switch>
         </Router>
 
         <Footer />
