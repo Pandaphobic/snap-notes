@@ -17,9 +17,9 @@ function App() {
     <div className="App">
       <div className="m-auto">
         <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="/notes">SNAP Assist</Navbar.Brand>
+          <Navbar.Brand href="/">SNAP Assist</Navbar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link href="/notes">Notes</Nav.Link>
+            <Nav.Link href="/">Notes</Nav.Link>
             <Nav.Link href="/schedule">Schedule</Nav.Link>
             <Nav.Link href="/outages">Outages</Nav.Link>
           </Nav>
@@ -27,9 +27,9 @@ function App() {
 
         <Router className="m-auto">
           <Switch>
-            <Route path="/notes" component={Notes} />
-            <Route path="/schedule" component={Schedule} />
-            <Route path="/outages" component={Outages} />
+            <Route path="/" exact component={Notes} />
+            <Route path="/schedule" exact component={Schedule} />
+            <Route path="/outages" exact component={Outages} />
           </Switch>
         </Router>
 
