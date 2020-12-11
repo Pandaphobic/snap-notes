@@ -1,5 +1,4 @@
 import React from "react"
-import { Table } from "react-bootstrap"
 import DropSchedule from "./DropSchedule"
 
 function Schedule() {
