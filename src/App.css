@@ -5,6 +5,17 @@
   font-weight: 700;
 }
 
+.link {
+  color: white;
+}
+.link:hover {
+  color: #50aec8;
+  text-decoration: none;
+}
+.link:active {
+  color: #c8f3ff;
+}
+
 .App {
   text-align: center;
 }
