@@ -5,17 +5,6 @@
   font-weight: 700;
 }
 
-.link {
-  color: white;
-}
-.link:hover {
-  color: #61dafb;
-  text-decoration: none;
-}
-.link:active {
-  color: #c8f3ff;
-}
-
 .App {
   text-align: center;
 }
@@ -50,6 +39,7 @@
   background-color: #282c34;
 }
 
+/* Scroll Bar */
 body::-webkit-scrollbar {
   width: 0.35rem;
 }

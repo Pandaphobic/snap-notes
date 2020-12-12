@@ -28,6 +28,7 @@ function App() {
           </Switch>
         </Container>
       </Router>
+
       <Footer />
     </div>
   )

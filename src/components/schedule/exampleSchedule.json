@@ -1,0 +1,9 @@
+{
+  "Monday": ["Phone8:30 AM - 10:00 AM", "Break10:00 AM - 10:15 AM", "Phone10:15 AM - 12:00 PM", "Lunch12:00 PM - 12:30 PM", "Phone12:30 PM - 2:45 PM", "Break2:45 PM - 3:00 PM", "Phone3:00 PM - 4:30 PM"],
+  "Tuesday": ["Phone8:30 AM - 10:00 AM", "Break10:00 AM - 10:15 AM", "Phone10:15 AM - 12:00 PM", "Lunch12:00 PM - 12:30 PM", "Phone12:30 PM - 2:45 PM", "Break2:45 PM - 3:00 PM", "Phone3:00 PM - 4:30 PM"],
+  "Wednesday": ["Phone8:30 AM - 10:00 AM", "Break10:00 AM - 10:15 AM", "Phone10:15 AM - 12:00 PM", "Lunch12:00 PM - 12:30 PM", "Phone12:30 PM - 2:45 PM", "Break2:45 PM - 3:00 PM", "Phone3:00 PM - 4:30 PM"],
+  "Thursday": ["Phone8:30 AM - 10:00 AM", "Break10:00 AM - 10:15 AM", "Phone10:15 AM - 12:00 PM", "Lunch12:00 PM - 12:30 PM", "Phone12:30 PM - 2:45 PM", "Break2:45 PM - 3:00 PM", "Phone3:00 PM - 4:30 PM"],
+  "Friday": ["Phone8:30 AM - 10:00 AM", "Break10:00 AM - 10:15 AM", "Phone10:15 AM - 12:00 PM", "Lunch12:00 PM - 12:30 PM", "Phone12:30 PM - 2:45 PM", "Break2:45 PM - 3:00 PM", "Phone3:00 PM - 4:30 PM"],
+  "Saturday": ["off"],
+  "Sunday": ["off"]
+}

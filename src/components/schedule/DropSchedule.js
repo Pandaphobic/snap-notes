@@ -3,11 +3,11 @@ import ReactDOM from "react-dom"
 import { Row, Form, Table } from "react-bootstrap"
 
 function DropSchedule() {
-  // REGEX filter to parse schedule
-  // currently only catch: phone, break, lunch, coaching
-  let re = /(?<=Investors Group )(.*)|(?=Phone)(.*)|(?=Break)(.*)|(?=Lunch)(.*)|(?=Coaching)(.*)/gm
-
   function catchText(e) {
+    // REGEX filter to parse schedule
+    // currently only catch: phone, break, lunch, coaching
+    let re = /(?<=Investors Group )(.*)|(?=Phone)(.*)|(?=Break)(.*)|(?=Lunch)(.*)|(?=Coaching)(.*)/gm
+
     // Grab incoming dropped text
     let coughtText = e.target.value
     // Returns RE matches to array
@@ -21,43 +21,43 @@ function DropSchedule() {
       scheduleItems.forEach((item, index) => {
         if (item.includes("Monday")) {
           items.push(
-            <tr className="bg-info" key={index}>
+            <tr className="bg-info dotw" key={index}>
               <th>{item}</th>
             </tr>
           )
         } else if (item.includes("Tuesday")) {
           items.push(
-            <tr className="bg-info" key={index}>
+            <tr className="bg-info dotw" key={index}>
               <th>{item}</th>
             </tr>
           )
         } else if (item.includes("Wednesday")) {
           items.push(
-            <tr className="bg-info" key={index}>
+            <tr className="bg-info dotw" key={index}>
               <th>{item}</th>
             </tr>
           )
         } else if (item.includes("Thursday")) {
           items.push(
-            <tr className="bg-info" key={index}>
+            <tr className="bg-info dotw" key={index}>
               <th>{item}</th>
             </tr>
           )
         } else if (item.includes("Friday")) {
           items.push(
-            <tr className="bg-info" key={index}>
+            <tr className="bg-info dotw" key={index}>
               <th>{item}</th>
             </tr>
           )
         } else if (item.includes("Saturday")) {
           items.push(
-            <tr className="bg-info" key={index}>
+            <tr className="bg-info dotw" key={index}>
               <th>{item}</th>
             </tr>
           )
         } else if (item.includes("Sunday")) {
           items.push(
-            <tr className="bg-info" key={index}>
+            <tr className="bg-info dotw" key={index}>
               <th>{item}</th>
             </tr>
           )
@@ -65,7 +65,7 @@ function DropSchedule() {
           // ***Should considfer color coding these
         } else {
           items.push(
-            <tr key={index}>
+            <tr className="sch-item" key={index}>
               <td>{item}</td>
             </tr>
           )
