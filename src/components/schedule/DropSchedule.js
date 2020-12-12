@@ -13,11 +13,10 @@ function DropSchedule() {
     // Returns RE matches to array
     let scheduleItems = coughtText.match(re)
 
-    console.log(coughtText)
-    console.log(scheduleItems)
-
     let items = []
 
+    // Check for day of the week and differentiate
+    // ****** THIS COULD BE DONE WAY BETTER*******
     if (scheduleItems) {
       scheduleItems.forEach((item, index) => {
         if (item.includes("Monday")) {
@@ -62,6 +61,8 @@ function DropSchedule() {
               <th>{item}</th>
             </tr>
           )
+          // Case for regular item
+          // ***Should considfer color coding these
         } else {
           items.push(
             <tr key={index}>
@@ -71,6 +72,7 @@ function DropSchedule() {
         }
       })
       console.log(items)
+      // Final Render of the schedule
       ReactDOM.render(items, document.getElementById("schedule-items"))
     }
   }
