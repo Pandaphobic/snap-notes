@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react"
-import { OutageContext } from "./OutageContext"
+import { OutageContext } from "../../contexts/OutageContext"
 
 import { Button, Col, Form, Modal, Row } from "react-bootstrap"
 
 const OutageForm = () => {
-  const { addOutage } = useContext(OutageContext)
+  const { dispatch } = useContext(OutageContext)
 
   // Outage State things
   const [scope, setScope] = useState("")
@@ -26,7 +26,15 @@ const OutageForm = () => {
     if (!instruction) return
     if (!masterTicket) return
     // If content, call add outage with the following info
-    addOutage(scope, title, instruction, masterTicket)
+    dispatch({
+      type: "ADD_OUTAGE",
+      outage: {
+        scope,
+        title,
+        instruction,
+        masterTicket
+      }
+    })
     // Clear fields
     setScope("")
     setTitle("")

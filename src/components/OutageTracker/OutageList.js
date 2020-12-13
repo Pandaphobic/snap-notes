@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import { OutageContext } from "./OutageContext"
+import { OutageContext } from "../../contexts/OutageContext"
 import OutageDetails from "./OutageDetails"
 import OutageForm from "./OutageForm"
 import { Table } from "react-bootstrap"
