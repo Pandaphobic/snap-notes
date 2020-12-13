@@ -2,27 +2,35 @@ import React, { useContext } from "react"
 import { OutageContext } from "./OutageContext"
 import OutageDetails from "./OutageDetails"
 import OutageForm from "./OutageForm"
+import { Table } from "react-bootstrap"
 
 const OutageList = () => {
   const { outages } = useContext(OutageContext)
   // ternary if outages is not empty
   return outages.length ? (
     <div className="App">
-      <table className="outage-list">
+      <Table className="outage-list">
         <thead>
-          <th>Scope</th>
-          <th>Title</th>
-          <th>Instruction</th>
-          <th>Master Ticket</th>
+          <tr>
+            <td>Scope</td>
+            <td>Title / Description</td>
+            <td>Instruction</td>
+            <td>Master</td>
+          </tr>
         </thead>
-        {outages.map(outage => (
-          <OutageDetails key={outage.id} outage={outage} />
-        ))}
-      </table>
-      {/* <OutageForm addOutage={addOutage} /> */}
+        <tbody>
+          {outages.map(outage => (
+            <OutageDetails key={outage.id} outage={outage} />
+          ))}
+        </tbody>
+      </Table>
+      <OutageForm />
     </div>
   ) : (
-    <div className="empty">No Outages to Display</div>
+    <>
+      <div className="empty">No Outages to Display</div>
+      <OutageForm />
+    </>
   )
 }
 

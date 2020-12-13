@@ -7,7 +7,7 @@ import { Container } from "react-bootstrap"
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom"
 
 // Contexts
-import OutageContextProvider, { BookContext } from "./components/OutageTracker/OutageContext"
+import OutageContextProvider, { OutageContext } from "./components/OutageTracker/OutageContext"
 
 // Components
 import Footer from "./components/Footer"

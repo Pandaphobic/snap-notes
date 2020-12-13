@@ -9,7 +9,9 @@ const OutageDetails = ({ outage }) => {
       <td>{outage.title}</td>
       <td>{outage.instruction}</td>
       <td>{outage.masterTicket}</td>
-      <i class="fa fa-trash fa-xs" aria-hidden="true" onClick={() => removeOutage(outage.id)}></i>
+      <td>
+        <i className="fa fa-trash fa-xs" style={{ cursor: "pointer" }} aria-hidden="true" onClick={() => removeOutage(outage.id)}></i>
+      </td>
     </tr>
   )
 }
