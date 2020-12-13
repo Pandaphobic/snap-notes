@@ -32,6 +32,7 @@ const OutageForm = () => {
     setTitle("")
     setInstruction("")
     setMasterTicket("")
+    handleClose()
   }
 
   return (
@@ -86,7 +87,7 @@ const OutageForm = () => {
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button type="submit" variant="primary" onClick={(handleSubmit, handleClose)}>
+            <Button type="submit" variant="primary" onClick={handleSubmit}>
               Add Outage
             </Button>
           </Modal.Footer>
