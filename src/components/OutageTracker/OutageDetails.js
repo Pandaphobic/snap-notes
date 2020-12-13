@@ -3,8 +3,29 @@ import { OutageContext } from "../../contexts/OutageContext"
 
 const OutageDetails = ({ outage }) => {
   const { dispatch } = useContext(OutageContext)
+
+  const type = () => {
+    switch (outage.scope) {
+      case "P1":
+        return "bg-danger"
+        break
+      case "P2":
+        return "bg-warning"
+        break
+      case "P3":
+        return "bg-info"
+        break
+      case "P4":
+        return "bg-primary"
+        break
+      case "RES":
+        return "bg-success"
+        break
+    }
+  }
+
   return (
-    <tr className="outage" id={outage.id}>
+    <tr className={"outage " + type()} id={outage.id}>
       <td>{outage.scope}</td>
       <td>{outage.title}</td>
       <td>{outage.instruction}</td>
