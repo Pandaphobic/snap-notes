@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import { ScheduleContext } from "../../contexts/ScheduleContext"
 import { Table } from "react-bootstrap"
 import ScheduleItems from "./ScheduleItems"
+import { v4 as uuid } from "uuid"
 
 const Schedule = () => {
   const { scheduleItems } = useContext(ScheduleContext)
@@ -9,9 +10,11 @@ const Schedule = () => {
     <div className="w-75 m-auto">
       <h4 className="pt-2">{`THIS WEEK`}</h4>
       <Table striped bordered hover variant="dark" className="m-auto">
-        {scheduleItems.map(scheduleItem => (
-          <ScheduleItems key={"schedule"} scheduleItem={scheduleItem} />
-        ))}
+        <tbody>
+          {scheduleItems.map(scheduleItem => (
+            <ScheduleItems key={uuid()} scheduleItem={scheduleItem} />
+          ))}
+        </tbody>
       </Table>
     </div>
   )

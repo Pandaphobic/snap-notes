@@ -10,14 +10,7 @@ const ScheduleContextProvider = props => {
 
   const updateSchedule = parsedScheduleItems => {
     setScheduleItems(parsedScheduleItems)
-    console.log(scheduleItems)
   }
-
-  // const [scheduleItems, setScheduleItems] = useState(scheduleReducer, [], () => {
-  //   const localData = localStorage.getItem("schedule-items")
-  //   return localData ? JSON.parse(localData) : []
-  // })
-
   useEffect(() => {
     localStorage.setItem("schedule-items", JSON.stringify(scheduleItems))
   }, [scheduleItems])

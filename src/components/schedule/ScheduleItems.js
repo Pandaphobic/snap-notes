@@ -1,14 +1,12 @@
 import React from "react"
-import { v4 as uuid } from "uuid"
 
 const ScheduleItems = ({ scheduleItem }) => {
-  console.log(scheduleItem)
   // Coaching is often numbered - this removes the number
   // ex. Coaching19:30 AM --> Coaching9:30 AM
   let Coaching = /(Coaching\d)/
   // Check for day of the week and differentiate
   // ****** THIS COULD BE DONE WAY BETTER*******
-  let HTMLItem = "heyguy"
+  let TRItem = "heyguy"
   let daysOfTheWeek = /Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday"/
 
   if (scheduleItem) {
@@ -17,8 +15,8 @@ const ScheduleItems = ({ scheduleItem }) => {
     }
 
     if (daysOfTheWeek.test(scheduleItem)) {
-      HTMLItem = (
-        <tr key={uuid()}>
+      TRItem = (
+        <tr>
           <th className="bg-info" style={{ fontSize: "18px" }}>
             {scheduleItem}
           </th>
@@ -30,7 +28,7 @@ const ScheduleItems = ({ scheduleItem }) => {
       // Add Space between Activities and Times
       // ex. Phone9:00 AM --> Phone - 9:00 AM
       scheduleItem = scheduleItem.replace(/([a-z])(\d+)/g, "$1 - $2")
-      HTMLItem = (
+      TRItem = (
         <tr>
           <td style={{ fontWeight: "600" }}>{scheduleItem}</td>
         </tr>
@@ -38,7 +36,7 @@ const ScheduleItems = ({ scheduleItem }) => {
     }
   }
 
-  return <tbody>{HTMLItem}</tbody>
+  return <>{TRItem}</>
 }
 
 export default ScheduleItems

@@ -6,8 +6,6 @@ import { Col, Button, Row, Form } from "react-bootstrap"
 const ScheduleDropBox = () => {
   const { updateSchedule } = useContext(ScheduleContext)
   // Schedule State things
-  const [scheduleItems, setScheduleItems] = useState("")
-
   const [rawSchedule, setRawSchedule] = useState("")
 
   const handleSubmit = e => {
@@ -22,7 +20,7 @@ const ScheduleDropBox = () => {
     // Update state with new array of schedule items
     // setScheduleItems({ scheduleItems: parsedScheduleItems })
 
-    // document.querySelector("textarea").value = ""
+    document.querySelector("textarea").value = ""
   }
 
   return (
