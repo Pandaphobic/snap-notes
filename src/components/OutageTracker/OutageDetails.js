@@ -8,18 +8,15 @@ const OutageDetails = ({ outage }) => {
     switch (outage.scope) {
       case "P1":
         return "bg-danger"
-        break
       case "P2":
         return "bg-warning"
-        break
       case "P3":
         return "bg-info"
-        break
       case "P4":
         return "bg-primary"
-        break
       case "RES":
         return "bg-success"
+      default:
         break
     }
   }

@@ -59,7 +59,7 @@ function Schedule() {
   function catchText(e) {
     // REGEX filter to parse schedule
     // currently only catch: phone, break, lunch, coaching
-    let regex_raw_items = /(?<=Investors Group )(.*)|(?= Tech)(.*)|(?= Phone)(.*)|(?= Break)(.*)|(?= Lunch)(.*)|(?= Coaching)(.*)(AM|PM)/gm
+    let regex_raw_items = /(?<=Investors Group )(.*)|(?= Tech)(.*)|(?= Phone)(.*)|(?= Break)(.*)|(?= Lunch)(.*)|(?= Coaching)(.*)(AM|PM)|(?= Meeting)(.*)(AM|PM)/gm
     // Grab incoming dropped text
     let coughtText = e.target.value
     // Returns RE matches to array
