@@ -4,10 +4,11 @@ const ScheduleItems = ({ scheduleItem }) => {
   // Coaching is often numbered - this removes the number
   // ex. Coaching19:30 AM --> Coaching9:30 AM
   let Coaching = /(Coaching\d)/
+
   // Check for day of the week and differentiate
-  // ****** THIS COULD BE DONE WAY BETTER*******
-  let TRItem = "heyguy"
   let daysOfTheWeek = /Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday"/
+
+  let TRItem = "Nothing to display"
 
   if (scheduleItem) {
     if (Coaching.test(scheduleItem)) {

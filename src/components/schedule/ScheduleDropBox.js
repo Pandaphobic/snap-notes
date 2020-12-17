@@ -29,7 +29,7 @@ const ScheduleDropBox = () => {
         <Col>
           <Form onSubmit={handleSubmit}>
             <Form.Control type="text" as="textarea" spellCheck="false" style={{ overflow: "hidden", resize: "none" }} className="drop-schedule bg-secondary" placeholder="drag schedule here (ctrl+a then drag whole page)" rows={1} onChange={e => setRawSchedule(e.target.value)} />
-            <Button type="submit">{"Submit"}</Button>
+            <Button type="submit">{"Update"}</Button>
           </Form>
         </Col>
       </Row>
