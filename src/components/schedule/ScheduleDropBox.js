@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react"
 import { ScheduleContext } from "../../contexts/ScheduleContext"
 
-import { Col, InputGroup, Button, Row, Form, Container } from "react-bootstrap"
+import { InputGroup, Button, Row, Form, Container } from "react-bootstrap"
 
 const ScheduleDropBox = () => {
   const { updateSchedule } = useContext(ScheduleContext)

@@ -13,7 +13,7 @@ import ScheduleContextProvider from "./contexts/ScheduleContext"
 // Components
 import Footer from "./components/Footer"
 import Schedule from "./components/schedule/Schedule"
-import Notes from "./components/Notes"
+import Notes from "./components/Notes/Notes"
 import Navigation from "./components/Navigation"
 import OutageList from "./components/OutageTracker/OutageList"
 import ScheduleDropBox from "./components/schedule/ScheduleDropBox"
@@ -21,7 +21,6 @@ import ScheduleDropBox from "./components/schedule/ScheduleDropBox"
 function App() {
   return (
     <div className="App">
-      {/* <Router> */}
       <Navigation />
       <Container className="mt-5">
         <Route exact path="/notes">
@@ -41,8 +40,8 @@ function App() {
           </OutageContextProvider>
         </Route>
       </Container>
-      {/* </Router> */}
 
+      <br />
       <Footer />
     </div>
   )

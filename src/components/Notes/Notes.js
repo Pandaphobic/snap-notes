@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react"
-import { CallerNotesContext } from "../contexts/NotesContext"
+import { CallerNotesContext } from "../../contexts/NotesContext"
 
 import { Container, Row, Col, Form, Button, InputGroup } from "react-bootstrap"
 
@@ -92,7 +92,7 @@ function Ticket() {
         <Form.Control onChange={e => setCallNotes(e.target.value)} style={fontWeight} as="textarea" rows={3} />
       </Row>
       <Row className="mb-2">
-        <Button style={fontWeight} onClick={handleClear} className="btn-block btn-info m-3">
+        <Button style={fontWeight} variant="outline-info" onClick={handleClear} className="btn-block m-3">
           Clear All <i className="fas fa-eraser"></i>
         </Button>
       </Row>

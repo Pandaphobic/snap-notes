@@ -45,7 +45,7 @@ const OutageForm = () => {
 
   return (
     <>
-      <Button variant="info" onClick={handleShow}>
+      <Button variant="outline-info" onClick={handleShow}>
         Add Outage
       </Button>
 
@@ -95,7 +95,7 @@ const OutageForm = () => {
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button type="submit" variant="primary" onClick={handleSubmit}>
+            <Button type="submit" variant="info" onClick={handleSubmit}>
               Add Outage
             </Button>
           </Modal.Footer>
