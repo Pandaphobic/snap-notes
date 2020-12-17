@@ -8,6 +8,10 @@ const NotesContextProvider = props => {
     return localData ? JSON.parse(localData) : []
   })
 
+  const updateSchedule = notes => {
+    setCallerNotes(notes)
+  }
+
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes))
     return () => {

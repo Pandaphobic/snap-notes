@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react"
 import { ScheduleContext } from "../../contexts/ScheduleContext"
 
-import { Col, Button, Row, Form } from "react-bootstrap"
+import { Col, InputGroup, Button, Row, Form, Container } from "react-bootstrap"
 
 const ScheduleDropBox = () => {
   const { updateSchedule } = useContext(ScheduleContext)
@@ -26,12 +26,19 @@ const ScheduleDropBox = () => {
   return (
     <>
       <Row className="m-auto pt-3">
-        <Col>
+        <Container className="w-75 p-0">
           <Form onSubmit={handleSubmit}>
-            <Form.Control type="text" as="textarea" spellCheck="false" style={{ overflow: "hidden", resize: "none" }} className="drop-schedule bg-secondary" placeholder="drag schedule here (ctrl+a then drag whole page)" rows={1} onChange={e => setRawSchedule(e.target.value)} />
-            <Button type="submit">{"Update"}</Button>
+            <InputGroup className="mb-3">
+              <InputGroup.Prepend>
+                <Button type="submit" variant="outline-secondary">
+                  {"Update  "}
+                  <i className="fas fa-sm fa-sync-alt"></i>
+                </Button>
+              </InputGroup.Prepend>
+              <Form.Control type="text" as="textarea" spellCheck="false" style={{ overflow: "hidden", resize: "none" }} className="drop-schedule bg-secondary" placeholder="drag schedule here" rows={1} onChange={e => setRawSchedule(e.target.value)} />
+            </InputGroup>
           </Form>
-        </Col>
+        </Container>
       </Row>
     </>
   )

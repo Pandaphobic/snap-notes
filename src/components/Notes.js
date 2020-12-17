@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
+import { CallerNotesContext } from "../contexts/NotesContext"
+
 import { Container, Row, Col, Form, Button, InputGroup } from "react-bootstrap"
 
 const fontWeight = {
@@ -6,6 +8,8 @@ const fontWeight = {
 }
 
 function Ticket() {
+  const notes = useContext(CallerNotesContext)
+
   const [callerUserID, setCallerUserID] = useState("")
   const [callerPhone, setCallerPhone] = useState("")
   const [callerPrevTicket, setCallerPrevTicket] = useState("")
