@@ -7,7 +7,7 @@ const fontWeight = {
 
 const textarea = { fontWeight: "600", lineHeight: "1.20", fontSize: "14px", border: "none", margin: "0", padding: "5px" }
 
-function Ticket() {
+function CallNotes() {
   let handleClear = () => {
     document.querySelectorAll("input").forEach(input => (input.value = ""))
     document.querySelector("textarea").value = ""
@@ -91,4 +91,4 @@ function Ticket() {
   )
 }
 
-export default Ticket
+export default CallNotes
