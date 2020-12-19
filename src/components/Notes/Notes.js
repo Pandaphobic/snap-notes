@@ -1,22 +1,13 @@
-import React, { useState, useEffect, useContext } from "react"
-import { CallerNotesContext } from "../../contexts/NotesContext"
-
+import React from "react"
 import { Container, Row, Col, Form, Button, InputGroup } from "react-bootstrap"
 
 const fontWeight = {
   fontWeight: "600"
 }
 
+const textarea = { fontWeight: "600", lineHeight: "1.20", fontSize: "14px", border: "none", margin: "0", padding: "5px" }
+
 function Ticket() {
-  const notes = useContext(CallerNotesContext)
-
-  const [callerUserID, setCallerUserID] = useState("")
-  const [callerPhone, setCallerPhone] = useState("")
-  const [callerPrevTicket, setCallerPrevTicket] = useState("")
-  const [advisorCode, setAdvisorCode] = useState("")
-  const [callerName, setCallerName] = useState("")
-  const [callNotes, setCallNotes] = useState("")
-
   let handleClear = () => {
     document.querySelectorAll("input").forEach(input => (input.value = ""))
     document.querySelector("textarea").value = ""
@@ -54,22 +45,22 @@ function Ticket() {
       <Row className="mb-2">
         <Col>
           <Form.Label>User ID</Form.Label>
-          <Form.Control onChange={e => setCallerUserID(e.target.value)} style={fontWeight} type="text" placeholder="user id" />
+          <Form.Control name="callerUserID" style={fontWeight} type="text" placeholder="exampt1" />
         </Col>
         <Col>
           <Form.Label>Phone Number</Form.Label>
-          <Form.Control onChange={e => setCallerPhone(e.target.value)} style={fontWeight} type="text" placeholder="xxx-xxx-xxxx ext xxxx" />
+          <Form.Control name="callerPhone" style={fontWeight} type="text" placeholder="xxx-xxx-xxxx ext xxxx" />
         </Col>
       </Row>
 
       <Row className="mb-2">
         <Col>
           <Form.Label>Previous Ticket</Form.Label>
-          <Form.Control onChange={e => setCallerPrevTicket(e.target.value)} style={fontWeight} type="text" placeholder="INCXXXXXXX" />
+          <Form.Control name="callerPrevTicket" style={fontWeight} type="text" placeholder="INCXXXXXXX" />
         </Col>
         <Col>
           <Form.Label>Advisor Code</Form.Label>
-          <Form.Control onChange={e => setAdvisorCode(e.target.value)} style={fontWeight} type="text" placeholder="code" />
+          <Form.Control name="advisorCode" style={fontWeight} type="text" placeholder="code" />
         </Col>
       </Row>
       {/* Full Name Section */}
@@ -82,14 +73,14 @@ function Ticket() {
                 <i className="fas fa-sync-alt"></i>
               </Button>
             </InputGroup.Prepend>
-            <Form.Control onChange={e => setCallerName(e.target.value)} id="fullname" style={fontWeight} type="text" placeholder="Lastname, Firstname" />
+            <Form.Control name="callerName" id="fullname" style={fontWeight} type="text" placeholder="Lastname, Firstname" />
           </InputGroup>
         </Col>
       </Row>
 
       <Row className="w-100 m-auto">
         <Form.Label>Quick Notes</Form.Label>
-        <Form.Control onChange={e => setCallNotes(e.target.value)} style={fontWeight} as="textarea" rows={3} />
+        <Form.Control name="quickNotes" style={textarea} as="textarea" rows={5} />
       </Row>
       <Row className="mb-2">
         <Button style={fontWeight} variant="outline-info" onClick={handleClear} className="btn-block m-3">
