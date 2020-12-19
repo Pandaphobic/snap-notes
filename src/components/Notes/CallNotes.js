@@ -55,8 +55,6 @@ function CallNotes() {
     localStorage.removeItem("quickNotes")
   }
 
-  let handleSave = () => {}
-
   let handleFlip = () => {
     let raw
     let fullname = []
@@ -126,12 +124,9 @@ function CallNotes() {
         <Form.Label>Quick Notes</Form.Label>
         <Form.Control onChange={e => handleChange(e)} name="quickNotes" style={textarea} as="textarea" rows={5} defaultValue={quickNotes()} />
       </Row>
-      <Row className="mt-3">
-        <Button style={fontWeight} variant="outline-danger" onClick={handleClear} className="m-auto col-5">
+      <Row>
+        <Button style={fontWeight} variant="outline-danger" onClick={handleClear} className="m-3 btn-block">
           Clear All <i className="fas fa-eraser"></i>
-        </Button>
-        <Button style={fontWeight} variant="outline-info" onClick={handleSave} className="m-auto col-5">
-          Save All <i className="fas fa-save"></i>
         </Button>
       </Row>
     </Container>
