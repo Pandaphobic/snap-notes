@@ -50,3 +50,13 @@ body::-webkit-scrollbar-thumb {
   background: #61dafb;
   border-radius: 5px;
 }
+textarea::-webkit-scrollbar {
+  width: 0.35rem;
+}
+textarea::-webkit-scrollbar-track {
+  background: #282c34;
+}
+textarea::-webkit-scrollbar-thumb {
+  background: #61dafb;
+  border-radius: 5px;
+}
