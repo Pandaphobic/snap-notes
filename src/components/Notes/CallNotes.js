@@ -76,6 +76,11 @@ function CallNotes() {
       let fixedName = fullname.map(name => {
         return name.trim();
       });
+      // Detect if <email@domain.com> present and remove it
+      if (fixedName[1].includes("<")) {
+        let temp1 = fixedName[1].split("<");
+        fixedName[1] = temp1[0].trim();
+      }
       nameInput.value = `${fixedName[1]} ${fixedName[0]}`;
     } else {
       fullname = raw.split(" ");
@@ -87,6 +92,8 @@ function CallNotes() {
       nameInput.value = `${outputName[1]}, ${outputName[0]}`;
     }
   };
+
+  // Steffes, Chris <chris.steffes@ig.ca>
 
   return (
     <Container className="w-75">
