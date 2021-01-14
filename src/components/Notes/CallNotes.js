@@ -62,6 +62,19 @@ function CallNotes() {
     localStorage.removeItem("quickNotes");
   };
 
+  let handleCopy = () => {
+    let copyTextArea = document.querySelector('textarea[name="copyInfo"]');
+
+    let userIDCopy = userID();
+    let phoneCopy = phone();
+    let regionCopy = region();
+
+    copyTextArea.value = `UserID: ${userIDCopy} \nPhone Number: ${phoneCopy} \nRO: ${regionCopy}`;
+    copyTextArea.select();
+    copyTextArea.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+  };
+
   let handleFlip = () => {
     let raw;
     let fullname = [];
@@ -122,7 +135,6 @@ function CallNotes() {
           />
         </Col>
       </Row>
-
       <Row className="mb-2">
         <Col>
           <Form.Label>Region</Form.Label>
@@ -147,7 +159,6 @@ function CallNotes() {
           />
         </Col>
       </Row>
-
       {/* Full Name Section */}
       <Row className="mb-2">
         <Col>
@@ -170,7 +181,6 @@ function CallNotes() {
           </InputGroup>
         </Col>
       </Row>
-
       <Row className="w-100 m-auto">
         <Form.Label>Quick Notes</Form.Label>
         <Form.Control
@@ -182,14 +192,35 @@ function CallNotes() {
           defaultValue={quickNotes()}
         />
       </Row>
-      <Row>
+      <Row className="w-100 m-auto">
+        <Form.Control
+          onChange={e => handleChange(e)}
+          name="copyInfo"
+          style={{ position: "fixed", right: "-10000px" }}
+          as="textarea"
+          rows={5}
+          defaultValue={""}
+        />
+      </Row>
+
+      {/* Buttons */}
+      <Row className="mt-3">
         <Button
           style={fontWeight}
           variant="outline-danger"
           onClick={handleClear}
-          className="m-3 btn-block"
+          className="m-auto col-5"
         >
           Clear All <i className="fas fa-eraser"></i>
+        </Button>
+
+        <Button
+          style={fontWeight}
+          variant="outline-info"
+          onClick={handleCopy}
+          className="m-auto col-5"
+        >
+          Copy Info <i className="fas fa-copy"></i>
         </Button>
       </Row>
     </Container>
