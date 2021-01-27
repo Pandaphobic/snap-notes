@@ -1,6 +1,6 @@
-import { Navbar, Nav } from "react-bootstrap"
-import { Link } from "react-router-dom"
-import React from "react"
+import { Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import React from "react";
 
 function Navigation() {
   return (
@@ -12,15 +12,26 @@ function Navigation() {
         <Nav.Link as={Link} className="m-1 p-1 link" to="/notes">
           Notes
         </Nav.Link>
-        <Nav.Link as={Link} className="m-1 p-1 link" to="/schedule">
-          Schedule
-        </Nav.Link>
+
         <Nav.Link as={Link} className="m-1 p-1 link" to="/outages">
           Outages
         </Nav.Link>
+
+        <Nav.Link as={Link} className="m-1 p-1 link" to="/schedule">
+          Schedule
+        </Nav.Link>
+
+        <Nav.Link
+          disabled="true"
+          as={Link}
+          className="m-1 p-1 link"
+          to="/Emails"
+        >
+          Emails
+        </Nav.Link>
       </Nav>
     </Navbar>
-  )
+  );
 }
 
-export default Navigation
+export default Navigation;
