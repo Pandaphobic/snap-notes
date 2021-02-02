@@ -12,7 +12,7 @@ const ScheduleDropBox = () => {
     e.preventDefault();
     // REGEX filter to parse schedule
     // currently only catch: phone, break, lunch, coaching
-    let regex_raw_items = /(?<=Investors Group )(.*)|(?= Tech)(.*)|(?= Phone)(.*)|(?= Break)(.*)|(?= Lunch)(.*)|(?= Coaching)(.*)(AM|PM)|(?= Meeting)(.*)(AM|PM)|(?= Corr)(.*)|(?= Training)(.*)(AM|PM)/gm;
+    let regex_raw_items = /(?<=Investors Group )(.*)|(?= Tech)(.*)|(?= Phone)(.*)|(?= Break)(.*)|(?= Lunch)(.*)|(?= Coaching)(.*)(AM|PM)|(?= Meeting)(.*)(AM|PM)|(?= Corr)(.*)(AM|PM)|(?= Training)(.*)(AM|PM)/gm;
     // Grab incoming dropped text and returns RE matches to array
     let parsedScheduleItems = rawSchedule.match(regex_raw_items);
     // console.log(coughtScheduleItems)
