@@ -104,6 +104,8 @@ function CallNotes() {
       let outputName = fixedName.filter(name => name !== "");
       nameInput.value = `${outputName[1]}, ${outputName[0]}`;
     }
+
+    nameInput.select();
   };
 
   // Steffes, Chris <chris.steffes@ig.ca>
