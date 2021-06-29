@@ -27,7 +27,7 @@ function Navigation() {
           Schedule
         </Nav.Link>
 
-        <Nav.Link style={style} as={Link} onClick={()=> setCount(count +1)} className="ml-5 m-1 p-1 link">
+        <Nav.Link style={style}  onClick={()=> setCount(count +1)} className="ml-5 m-1 p-1 link">
          Count: {count}
         </Nav.Link>
         {/* <Nav.Link

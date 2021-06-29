@@ -43,6 +43,11 @@ let quickNotes = () => {
   return lsquickNotes ? lsquickNotes : "";
 };
 
+let incOffered = () => {
+  let lsIncOffered = localStorage.getItem("IncOffered");
+  return lsIncOffered ? lsIncOffered : "";
+};
+
 function handleChange(e) {
   console.log(e.target.name);
   localStorage.setItem(e.target.name, e.target.value);
@@ -197,14 +202,16 @@ function CallNotes() {
         />
         <Col>
           <Form.Check className="mt-2"
+            onChange={e =>handleChange(e)}
+            name="IncOffered"
             inline
             label="INC Offered"
             type="checkbox"
-            id="checkbox"
+            id="IncOffered"
           />
           <Form.Check className="mt-2"
             inline
-            label="name"
+            label="Name"
             type="checkbox"
             id="name"
           />

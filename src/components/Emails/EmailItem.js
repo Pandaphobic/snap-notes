@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Accordion, Card, Form } from "react-bootstrap";
 
 function EmailItem(props) {
