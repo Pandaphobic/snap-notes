@@ -202,12 +202,12 @@ function CallNotes() {
         />
         <Col>
           <Form.Check className="mt-2"
-            onChange={e =>handleChange(e)}
+            onChange={e => handleChange(e)}
             name="IncOffered"
             inline
             label="INC Offered"
             type="checkbox"
-            id="IncOffered"
+            id="checkbox"
           />
           <Form.Check className="mt-2"
             inline
