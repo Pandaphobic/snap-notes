@@ -57,7 +57,7 @@ console.log(userID());
 
 function CallNotes() {
   let handleClear = () => {
-    document.querySelector("#checkbox").checked = false;
+    document.querySelector("#incOffered").checked = false;
     document.querySelector("#name").checked = false;
     document.querySelectorAll("input").forEach(input => (input.value = ""));
     document.querySelector("textarea").value = "";
@@ -200,16 +200,20 @@ function CallNotes() {
           rows={5}
           defaultValue={quickNotes()}
         />
+      </Row>
+      <Row>
         <Col>
-          <Form.Check className="mt-2"
+          <Form.Check
+            className="mt-2"
             onChange={e => handleChange(e)}
             name="IncOffered"
             inline
             label="INC Offered"
             type="checkbox"
-            id="checkbox"
+            id="incOffered"
           />
-          <Form.Check className="mt-2"
+          <Form.Check
+            className="mt-2"
             inline
             label="Name"
             type="checkbox"
