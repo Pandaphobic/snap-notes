@@ -43,10 +43,10 @@ let quickNotes = () => {
   return lsquickNotes ? lsquickNotes : "";
 };
 
-let incOffered = () => {
-  let lsIncOffered = localStorage.getItem("IncOffered");
-  return lsIncOffered ? lsIncOffered : "";
-};
+// let incOffered = () => {
+//   let lsIncOffered = localStorage.getItem("IncOffered");
+//   return lsIncOffered ? lsIncOffered : "";
+// };
 
 function handleChange(e) {
   console.log(e.target.name);

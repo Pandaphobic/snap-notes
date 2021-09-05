@@ -6,7 +6,6 @@ import {
   Tooltip,
   OverlayTrigger,
   FormControl,
-  Form,
 } from "react-bootstrap";
 import EmailItem from "./EmailItem";
 
