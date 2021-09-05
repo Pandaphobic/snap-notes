@@ -1,5 +1,8 @@
 import React from "react";
-import { Container, Row, Col, Form, Button, InputGroup } from "react-bootstrap";
+import { Container, Row, Col, Button, InputGroup } from "react-bootstrap";
+import Label from "react-bootstrap/FormLabel";
+import Control from "react-bootstrap/FormControl";
+import Check from "react-bootstrap/FormCheck";
 
 const fontWeight = {
   fontWeight: "600",
@@ -43,10 +46,10 @@ let quickNotes = () => {
   return lsquickNotes ? lsquickNotes : "";
 };
 
-let incOffered = () => {
-  let lsIncOffered = localStorage.getItem("IncOffered");
-  return lsIncOffered ? lsIncOffered : "";
-};
+// let incOffered = () => {
+//   let lsIncOffered = localStorage.getItem("IncOffered");
+//   return lsIncOffered ? lsIncOffered : "";
+// };
 
 function handleChange(e) {
   console.log(e.target.name);
@@ -139,8 +142,8 @@ function CallNotes() {
       <br />
       <Row className="mb-2">
         <Col>
-          <Form.Label>User ID</Form.Label>
-          <Form.Control
+          <Label>User ID</Label>
+          <Control
             onChange={e => handleChange(e)}
             name="userID"
             style={fontWeight}
@@ -150,8 +153,8 @@ function CallNotes() {
           />
         </Col>
         <Col>
-          <Form.Label>Phone Number</Form.Label>
-          <Form.Control
+          <Label>Phone Number</Label>
+          <Control
             onChange={e => handleChange(e)}
             name="phone"
             style={fontWeight}
@@ -163,8 +166,8 @@ function CallNotes() {
       </Row>
       <Row className="mb-2">
         <Col>
-          <Form.Label>Region</Form.Label>
-          <Form.Control
+          <Label>Region</Label>
+          <Control
             onChange={e => handleChange(e)}
             name="region"
             style={fontWeight}
@@ -174,8 +177,8 @@ function CallNotes() {
           />
         </Col>
         <Col>
-          <Form.Label>Advisor Code</Form.Label>
-          <Form.Control
+          <Label>Advisor Code</Label>
+          <Control
             onChange={e => handleChange(e)}
             name="advisorCode"
             style={fontWeight}
@@ -188,14 +191,14 @@ function CallNotes() {
       {/* Full Name Section */}
       <Row className="mb-2">
         <Col>
-          <Form.Label>Full Name</Form.Label>
+          <Label>Full Name</Label>
           <InputGroup className="mb-3">
             <InputGroup.Prepend>
               <Button onClick={handleFlip} variant="outline-secondary">
                 <i className="fas fa-sync-alt"></i>
               </Button>
             </InputGroup.Prepend>
-            <Form.Control
+            <Control
               onChange={e => handleChange(e)}
               name="fullname"
               id="fullname"
@@ -208,8 +211,8 @@ function CallNotes() {
         </Col>
       </Row>
       <Row className="w-100 m-auto">
-        <Form.Label>Quick Notes </Form.Label>
-        <Form.Control
+        <Label>Quick Notes </Label>
+        <Control
           onChange={e => handleChange(e)}
           name="quickNotes"
           style={textarea}
@@ -220,7 +223,7 @@ function CallNotes() {
       </Row>
       <Row>
         <Col>
-          <Form.Check
+          <Check
             className="mt-2"
             onChange={e => handleChange(e)}
             name="IncOffered"
@@ -229,7 +232,7 @@ function CallNotes() {
             type="checkbox"
             id="incOffered"
           />
-          <Form.Check
+          <Check
             className="mt-2"
             inline
             label="Name"
@@ -239,7 +242,7 @@ function CallNotes() {
         </Col>
       </Row>
       <Row className="w-100 m-auto">
-        <Form.Control
+        <Control
           onChange={e => handleChange(e)}
           name="copyInfo"
           style={{ position: "fixed", right: "-10000px" }}
