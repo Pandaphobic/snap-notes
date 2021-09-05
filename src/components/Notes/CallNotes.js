@@ -71,12 +71,29 @@ function CallNotes() {
 
   let handleCopy = () => {
     let copyTextArea = document.querySelector('textarea[name="copyInfo"]');
+    let arrayOfCopies = [];
 
     let userIDCopy = userID();
     let phoneCopy = phone();
     let regionCopy = region();
+    let advisorCopy = advisorCode();
 
-    copyTextArea.value = `UserID: ${userIDCopy} \nPhone Number: ${phoneCopy} \nRO: ${regionCopy}`;
+    if (userIDCopy.length > 0) {
+      arrayOfCopies.push(`UserID: ${userIDCopy}`);
+    }
+    if (phoneCopy.length > 0) {
+      arrayOfCopies.push(`Phone: ${phoneCopy}`);
+    }
+    if (regionCopy.length > 0) {
+      arrayOfCopies.push(`Region #: ${regionCopy}`);
+    }
+    if (advisorCopy.length > 0) {
+      arrayOfCopies.push(`Advisor Code: ${advisorCopy}`);
+    }
+
+    let copyTextAreaValue = arrayOfCopies.join(`\n`);
+
+    copyTextArea.value = copyTextAreaValue;
     copyTextArea.select();
     copyTextArea.setSelectionRange(0, 99999);
     document.execCommand("copy");
